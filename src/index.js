@@ -17,7 +17,13 @@ if(process.env.NODE_ENV !== 'production') {
 app.on('ready', () => {
 
   // The Main Window
-  mainWindow = new BrowserWindow({width: 720, height: 600});
+  mainWindow = new BrowserWindow({
+    width : 720,
+    height : 600,
+    webPreferences : {
+      nodeIntegration : true
+    }
+  })
 
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'views/index.html'),
@@ -42,7 +48,10 @@ function createNewProductWindow() {
   newProductWindow = new BrowserWindow({
     width: 400,
     height: 330,
-    title: 'Add A New Product'
+    title: 'Add A New Product',
+    webPreferences : {
+      nodeIntegration : true
+    }
   });
   newProductWindow.setMenu(null);
 
