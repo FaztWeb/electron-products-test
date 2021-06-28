@@ -85,7 +85,7 @@ const templateMenu = [
       },
       {
         label: 'Exit',
-        accelerator: process.platform == 'darwin' ? 'command+Q' : 'Ctrl+Q',
+        accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
         click() {
           app.quit();
         }
@@ -108,7 +108,7 @@ if (process.env.NODE_ENV !== 'production') {
     submenu: [
       {
         label: 'Show/Hide Dev Tools',
-        accelerator: process.platform == 'darwin' ? 'Comand+D' : 'Ctrl+D',
+        accelerator: process.platform == 'darwin' ? 'Command+D' : 'Ctrl+D',
         click(item, focusedWindow) {
           focusedWindow.toggleDevTools();
         }
